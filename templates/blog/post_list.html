@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+   {% for poost in allpost %}
+      <p><a href="{% url 'post-detail' poost.id %}">{{ poost.title }}</a></p>
+   <br>
+   {% endfor %}

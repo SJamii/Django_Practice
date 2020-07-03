@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home portion</title>
+</head>
+<body>
+<h1>This is home page</h1>
+<h1>name is : {{ name }}</h1>
+<h1>roll is : {{ roll }}</h1>
+{% for sub,value in subject.items %}
+ <br>
+     <td> {{ sub }} </td>
+<td> {{ value }} </td></br>
+ </tr>
+{% endfor %}
+</body>
+</html>

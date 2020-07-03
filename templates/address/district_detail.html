@@ -1,0 +1,13 @@
+{% extends 'address/base.html' %}
+{% block title %}District Detail{% endblock %}
+{% block content %}
+<hr>
+<h1>Name of District: {{ dis_info.name }}</h1>
+<br>
+<hr>
+<p>Area : {{ dis_info.area }}</p>
+<p>Population : {{ dis_info.population }}</p>
+<p>Literacy Rate: {{ dis_info.literacy }}</p>
+<p>Number of Subdivision : {{ dis_info.subdivision }}</p>
+<br>
+{% endblock %}
