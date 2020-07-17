@@ -1,0 +1,13 @@
+{% extends 'new_blog/base.html' %}
+{% block title %}List of Blog post{% endblock %}
+{% block content %}
+<hr>
+<h1>This is the list of Blog Post</h1>
+<br>
+{% for list in post %}
+<br>
+<p>{{ list.title }}</p>
+<p><a href="{% url 'post-details' list.id %}">read more</a></p>
+<hr>
+{% endfor %}
+{% endblock %}

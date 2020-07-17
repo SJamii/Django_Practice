@@ -1,0 +1,17 @@
+{% extends 'new_blog/base.html' %}
+{% block title %}Post Detail{% endblock %}
+{% block content %}
+
+<div class="col-md-8">
+    <div class="card">
+        <img src="{{ single.image.url }}" alt=""class="card-img-top">
+        <div class="card-body">
+            <h5>{{ single.title }}</h5>
+            <p>Created At: {{ single.created_at }}, Updated At: {{ single.updated_at }}</p>
+            <hr>
+            <p>{{ single.description}}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
