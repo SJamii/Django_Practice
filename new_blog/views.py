@@ -72,7 +72,12 @@ def blog_search(request):
     title_ne = request.GET.get('Search')
     if title_ne:
         dekhabo = Posts.objects.get(title__icontains = title_ne)
-        dekhs = Posts.objects.filter(title=dekhabo)
+         try :
+                dekhs = Posts.objects.filter(title=dekhabo)
+                context = {'dekhabo':dekhs}
+         except Exception as err:
+            context = {'error':str(err)}
+            
         context = {'form':forms,'dekhabo':dekhs}
     return render(request,'new_blog/search.html',context)
 
